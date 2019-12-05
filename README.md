@@ -1,6 +1,8 @@
 
 # 源码分析
 
+基于原始的vue和纯粹的javascript构建，scss单独分开管理。
+
 ## 文件结构
 
 ``` bash
@@ -79,10 +81,10 @@
 |  ├── breadcrumb-item
 |  |  └── index.js
 |  ├── button
-|  |  ├── index.js
+|  |  ├── index.js - 引用button.vue
 |  |  └── src
 |  |     ├── button-group.vue
-|  |     └── button.vue
+|  |     └── button.vue - 按钮组件
 |  ├── button-group
 |  |  └── index.js
 |  ├── calendar
@@ -548,63 +550,11 @@
 |  ├── directives
 |  |  ├── mousewheel.js
 |  |  └── repeat-click.js
-|  ├── index.js
+|  ├── index.js - 提供install方法，作为vue插件，注册packages文件夹下的所有组件
 |  ├── locale
 |  |  ├── format.js
 |  |  ├── index.js
-|  |  └── lang
-|  |     ├── af-ZA.js
-|  |     ├── ar.js
-|  |     ├── bg.js
-|  |     ├── ca.js
-|  |     ├── cs-CZ.js
-|  |     ├── da.js
-|  |     ├── de.js
-|  |     ├── ee.js
-|  |     ├── el.js
-|  |     ├── en.js
-|  |     ├── eo.js
-|  |     ├── es.js
-|  |     ├── eu.js
-|  |     ├── fa.js
-|  |     ├── fi.js
-|  |     ├── fr.js
-|  |     ├── he.js
-|  |     ├── hr.js
-|  |     ├── hu.js
-|  |     ├── hy-AM.js
-|  |     ├── id.js
-|  |     ├── it.js
-|  |     ├── ja.js
-|  |     ├── kg.js
-|  |     ├── km.js
-|  |     ├── ko.js
-|  |     ├── ku.js
-|  |     ├── kz.js
-|  |     ├── lt.js
-|  |     ├── lv.js
-|  |     ├── mn.js
-|  |     ├── nb-NO.js
-|  |     ├── nl.js
-|  |     ├── pl.js
-|  |     ├── pt-br.js
-|  |     ├── pt.js
-|  |     ├── ro.js
-|  |     ├── ru-RU.js
-|  |     ├── sk.js
-|  |     ├── sl.js
-|  |     ├── sr.js
-|  |     ├── sv-SE.js
-|  |     ├── ta.js
-|  |     ├── th.js
-|  |     ├── tk.js
-|  |     ├── tr-TR.js
-|  |     ├── ua.js
-|  |     ├── ug-CN.js
-|  |     ├── uz-UZ.js
-|  |     ├── vi.js
-|  |     ├── zh-CN.js
-|  |     └── zh-TW.js
+|  |  └── lang - 国际化语言包
 |  ├── mixins
 |  |  ├── emitter.js
 |  |  ├── focus.js
