@@ -517,7 +517,7 @@
 |  |  ├── index.js
 |  |  └── lang - 国际化语言包
 |  ├── mixins
-|  |  ├── emitter.js
+|  |  ├── emitter.js - 提供dispatch给指定名称祖宗组件通信，提供broadcast给指定名称重孙组件通信
 |  |  ├── focus.js
 |  |  ├── locale.js
 |  |  └── migrating.js

@@ -18,6 +18,7 @@
     </label-wrap>
     <div class="el-form-item__content" :style="contentStyle">
       <slot></slot>
+      <!-- 内置动画组件 -->
       <transition name="el-zoom-in-top">
         <slot
           v-if="validateState === 'error' && showMessage && form.showMessage"

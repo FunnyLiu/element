@@ -1,4 +1,5 @@
 <template>
+  <!-- 多条件判断class -->
   <form class="el-form" :class="[
     labelPosition ? 'el-form--label-' + labelPosition : '',
     { 'el-form--inline': inline }
@@ -13,7 +14,7 @@
     name: 'ElForm',
 
     componentName: 'ElForm',
-
+    // 将组件自己提供出去
     provide() {
       return {
         elForm: this
@@ -21,6 +22,7 @@
     },
 
     props: {
+      //表单对象
       model: Object,
       rules: Object,
       labelPosition: String,
@@ -48,9 +50,11 @@
       }
     },
     watch: {
+      //如果rules动态变化了
       rules() {
         // remove then add event listeners on form-item after form rules change
         this.fields.forEach(field => {
+          //重置每一个的条件
           field.removeValidateEvents();
           field.addValidateEvents();
         });
@@ -69,11 +73,13 @@
     },
     data() {
       return {
+        // 需要校验的字段
         fields: [],
         potentialLabelWidthArr: [] // use this array to calculate auto width
       };
     },
     created() {
+      // 通过事件来增加校验字段
       this.$on('el.form.addField', (field) => {
         if (field) {
           this.fields.push(field);
@@ -106,6 +112,7 @@
           field.clearValidate();
         });
       },
+      // 校验方法，通过回调来作为成功
       validate(callback) {
         if (!this.model) {
           console.warn('[Element Warn][Form]model is required for validate to work!');
@@ -114,6 +121,7 @@
 
         let promise;
         // if no callback, return promise
+        // 如果没有回调函数，就返回promise
         if (typeof callback !== 'function' && window.Promise) {
           promise = new window.Promise((resolve, reject) => {
             callback = function(valid) {
@@ -130,7 +138,9 @@
         }
         let invalidFields = {};
         this.fields.forEach(field => {
+          // 调用校验规则的validate方法
           field.validate('', (message, field) => {
+            //如果有消息说明校验不通过
             if (message) {
               valid = false;
             }
