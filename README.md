@@ -112,7 +112,7 @@
 |  ├── container
 |  |  ├── index.js
 |  |  └── src
-|  |     └── main.vue
+|  |     └── main.vue - el-container组件，通过this.$slots.default上vnode.componentOptions.tag判断子内容中是否存在某些子组件，从而定制化样式
 |  ├── date-picker
 |  |  ├── index.js
 |  |  └── src

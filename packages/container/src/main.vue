@@ -21,6 +21,7 @@
         } else if (this.direction === 'horizontal') {
           return false;
         }
+        // 判断子$slots中是否存在某些组件
         return this.$slots && this.$slots.default
           ? this.$slots.default.some(vnode => {
             const tag = vnode.componentOptions && vnode.componentOptions.tag;
