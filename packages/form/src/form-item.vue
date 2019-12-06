@@ -247,7 +247,7 @@
         this.$nextTick(() => {
           this.validateDisabled = false;
         });
-
+        // 往下层通信
         this.broadcast('ElTimeSelect', 'fieldReset', this.initialValue);
       },
       getRules() {
@@ -300,6 +300,7 @@
     },
     mounted() {
       if (this.prop) {
+        // 往上层通信
         this.dispatch('ElForm', 'el.form.addField', [this]);
 
         let initialValue = this.fieldValue;

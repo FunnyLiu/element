@@ -80,6 +80,7 @@
     },
     created() {
       // 通过事件来增加校验字段
+      // 接收下层来的通信
       this.$on('el.form.addField', (field) => {
         if (field) {
           this.fields.push(field);
