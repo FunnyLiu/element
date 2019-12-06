@@ -7,47 +7,8 @@
 
 ``` bash
 /Users/liufang/openSource/FunnyLiu/element
-├── CHANGELOG.en-US.md
-├── CHANGELOG.es.md
-├── CHANGELOG.fr-FR.md
-├── CHANGELOG.zh-CN.md
-├── FAQ.md
-├── LICENSE
-├── Makefile
-├── README.md
-├── build
-|  ├── bin
-|  |  ├── build-entry.js
-|  |  ├── build-locale.js
-|  |  ├── gen-cssfile.js
-|  |  ├── gen-indices.js
-|  |  ├── i18n.js
-|  |  ├── iconInit.js
-|  |  ├── new-lang.js
-|  |  ├── new.js
-|  |  ├── template.js
-|  |  └── version.js
-|  ├── config.js
-|  ├── deploy-ci.sh
-|  ├── deploy-faas.sh
-|  ├── gen-single-config.js
-|  ├── git-release.sh
-|  ├── md-loader
-|  |  ├── config.js
-|  |  ├── containers.js
-|  |  ├── fence.js
-|  |  ├── index.js
-|  |  └── util.js
-|  ├── release.sh
-|  ├── webpack.common.js
-|  ├── webpack.component.js
-|  ├── webpack.conf.js
-|  ├── webpack.demo.js
-|  ├── webpack.extension.js
-|  └── webpack.test.js
-├── components.json
-├── element_logo.svg
-├── packages
+├── build - 打包相关脚本，暂时忽略
+├── packages - 具体的每个组件
 |  ├── alert
 |  |  ├── index.js
 |  |  └── src
@@ -128,7 +89,7 @@
 |  ├── col
 |  |  ├── index.js
 |  |  └── src
-|  |     └── col.js
+|  |     └── col.js - el-col，通过递归找到上一层父亲el-row的gutter属性。
 |  ├── collapse
 |  |  ├── index.js
 |  |  └── src
@@ -314,7 +275,7 @@
 |  |  └── src
 |  |     └── main.vue
 |  ├── row
-|  |  ├── index.js
+|  |  ├── index.js - el-row，通过render创建自定义dom，内容为$slots.default
 |  |  └── src
 |  |     └── row.js
 |  ├── scrollbar

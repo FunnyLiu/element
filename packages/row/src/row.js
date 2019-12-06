@@ -34,6 +34,7 @@ export default {
   },
 
   render(h) {
+    //createElement的标签为自定义的传入值tag
     return h(this.tag, {
       class: [
         'el-row',
@@ -42,6 +43,8 @@ export default {
         { 'el-row--flex': this.type === 'flex' }
       ],
       style: this.style
+      //其子组件为$slots内容
+      //使用$slots.default和children的区别？https://cn.vuejs.org/v2/guide/render-function.html#slots-%E5%92%8C-children-%E5%AF%B9%E6%AF%94
     }, this.$slots.default);
   }
 };

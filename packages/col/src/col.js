@@ -21,7 +21,10 @@ export default {
   },
 
   computed: {
+    // 获取到父亲的gutter属性
     gutter() {
+      //通过递归
+      //找到上一层父亲el-row组件为止
       let parent = this.$parent;
       while (parent && parent.$options.componentName !== 'ElRow') {
         parent = parent.$parent;
@@ -37,7 +40,7 @@ export default {
       style.paddingLeft = this.gutter / 2 + 'px';
       style.paddingRight = style.paddingLeft;
     }
-
+    // 根据入参format class
     ['span', 'offset', 'pull', 'push'].forEach(prop => {
       if (this[prop] || this[prop] === 0) {
         classList.push(
@@ -62,7 +65,7 @@ export default {
         });
       }
     });
-
+    
     return h(this.tag, {
       class: ['el-col', classList],
       style
