@@ -16,7 +16,7 @@
 |  ├── aside
 |  |  ├── index.js
 |  |  └── src
-|  |     └── main.vue
+|  |     └── main.vue  - el-aside 简单的嵌入slot
 |  ├── autocomplete
 |  |  ├── index.js
 |  |  └── src
@@ -42,10 +42,10 @@
 |  ├── breadcrumb-item
 |  |  └── index.js
 |  ├── button
-|  |  ├── index.js - 引用button.vue
+|  |  ├── index.js 
 |  |  └── src
-|  |     ├── button-group.vue
-|  |     └── button.vue - 按钮组件
+|  |     ├── button-group.vue - el-button-group组件，简单嵌入slot
+|  |     └── button.vue - el-button按钮组件，通过inject接收elForm和elFormItem属性，对外抛事件
 |  ├── button-group
 |  |  └── index.js
 |  ├── calendar
@@ -158,7 +158,7 @@
 |  ├── footer
 |  |  ├── index.js
 |  |  └── src
-|  |     └── main.vue
+|  |     └── main.vue - el-footer组件，简单的嵌入slot
 |  ├── form
 |  |  ├── index.js
 |  |  └── src
@@ -170,7 +170,7 @@
 |  ├── header
 |  |  ├── index.js
 |  |  └── src
-|  |     └── main.vue
+|  |     └── main.vue - el-header组件，简单的嵌入slot
 |  ├── icon
 |  |  ├── index.js
 |  |  └── src
@@ -196,7 +196,7 @@
 |  ├── link
 |  |  ├── index.js
 |  |  └── src
-|  |     └── main.vue
+|  |     └── main.vue - el-link组件，兼容slot内容和slot图标，通过$attrs传递属性给下层
 |  ├── loading
 |  |  ├── index.js
 |  |  └── src
@@ -206,7 +206,7 @@
 |  ├── main
 |  |  ├── index.js
 |  |  └── src
-|  |     └── main.vue
+|  |     └── main.vue - el-main组件，简单的嵌入slot
 |  ├── menu
 |  |  ├── index.js
 |  |  └── src

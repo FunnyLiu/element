@@ -19,13 +19,14 @@
   >
     <i class="el-icon-loading" v-if="loading"></i>
     <i :class="icon" v-if="icon && !loading"></i>
+    <!-- 如果有slot则展示slot内容 -->
     <span v-if="$slots.default"><slot></slot></span>
   </button>
 </template>
 <script>
   export default {
     name: 'ElButton',
-
+    // 接收表单注入的属性elForm和elFormItem
     inject: {
       elForm: {
         default: ''

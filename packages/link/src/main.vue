@@ -10,9 +10,9 @@
     v-bind="$attrs"
     @click="handleClick"
   >
-
+    <!-- 通过attrs专递所有属性给子 -->
     <i :class="icon" v-if="icon"></i>
-
+    <!-- 同时兼任插槽内容和插件图标 -->
     <span v-if="$slots.default" class="el-link--inner">
       <slot></slot>
     </span>
