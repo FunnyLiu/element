@@ -120,7 +120,7 @@
     componentName: 'ElInput',
 
     mixins: [emitter, Migrating],
-
+    //多余入参不渲染到html
     inheritAttrs: false,
 
     inject: {

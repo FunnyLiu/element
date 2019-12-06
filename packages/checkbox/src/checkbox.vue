@@ -214,6 +214,7 @@
     },
 
     watch: {
+      // 监听value抛校验事件
       value(value) {
         this.dispatch('ElFormItem', 'el.form.change', value);
       }

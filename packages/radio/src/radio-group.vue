@@ -103,6 +103,7 @@
     },
     watch: {
       value(value) {
+        // 触发给el-form-item，用于校验
         this.dispatch('ElFormItem', 'el.form.change', [this.value]);
       }
     }

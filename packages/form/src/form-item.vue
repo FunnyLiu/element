@@ -17,9 +17,11 @@
       </label>
     </label-wrap>
     <div class="el-form-item__content" :style="contentStyle">
+      <!-- 内嵌的表单内容 -->
       <slot></slot>
       <!-- 内置动画组件 -->
       <transition name="el-zoom-in-top">
+        <!-- 如果validateState为error则展示错误 -->
         <slot
           v-if="validateState === 'error' && showMessage && form.showMessage"
           name="error"
@@ -51,13 +53,13 @@
     componentName: 'ElFormItem',
 
     mixins: [emitter],
-
+    //将自己暴露给下层
     provide() {
       return {
         elFormItem: this
       };
     },
-
+    //接受上层的el-form组件实例
     inject: ['elForm'],
 
     props: {
@@ -88,6 +90,7 @@
     },
     watch: {
       error: {
+        // 立即触发
         immediate: true,
         handler(value) {
           this.validateMessage = value;
@@ -178,6 +181,7 @@
     },
     data() {
       return {
+        // 标识检验状态
         validateState: '',
         validateMessage: '',
         validateDisabled: false,
@@ -290,6 +294,7 @@
         const rules = this.getRules();
 
         if (rules.length || this.required !== undefined) {
+          // 监听失焦和change事件，开始校验
           this.$on('el.form.blur', this.onFieldBlur);
           this.$on('el.form.change', this.onFieldChange);
         }

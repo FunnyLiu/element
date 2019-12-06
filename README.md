@@ -79,9 +79,9 @@
 |  ├── checkbox
 |  |  ├── index.js
 |  |  └── src
-|  |     ├── checkbox-button.vue
-|  |     ├── checkbox-group.vue
-|  |     └── checkbox.vue
+|  |     ├── checkbox-button.vue - el-checkbox-button组件
+|  |     ├── checkbox-group.vue - el-checkbox-group组件
+|  |     └── checkbox.vue - el-checkbox组件
 |  ├── checkbox-button
 |  |  └── index.js
 |  ├── checkbox-group
@@ -162,8 +162,8 @@
 |  ├── form
 |  |  ├── index.js
 |  |  └── src
-|  |     ├── form-item.vue
-|  |     ├── form.vue
+|  |     ├── form-item.vue - el-form-item组件，通过emitters来进行上下层通信
+|  |     ├── form.vue - el-form组件 
 |  |     └── label-wrap.vue
 |  ├── form-item
 |  |  └── index.js
@@ -188,7 +188,7 @@
 |  |  ├── index.js
 |  |  └── src
 |  |     ├── calcTextareaHeight.js
-|  |     └── input.vue
+|  |     └── input.vue - el-input组件
 |  ├── input-number
 |  |  ├── index.js
 |  |  └── src
@@ -263,9 +263,9 @@
 |  ├── radio
 |  |  ├── index.js
 |  |  └── src
-|  |     ├── radio-button.vue
-|  |     ├── radio-group.vue
-|  |     └── radio.vue
+|  |     ├── radio-button.vue el-radio-button组件
+|  |     ├── radio-group.vue - el-radio-group组件，传递el.form.change事件用于el-form-item来校验
+|  |     └── radio.vue - el-radio组件
 |  ├── radio-button
 |  |  └── index.js
 |  ├── radio-group
