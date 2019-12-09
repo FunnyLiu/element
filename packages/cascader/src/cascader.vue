@@ -70,6 +70,7 @@
         v-show="dropDownVisible"
         ref="popper"
         :class="['el-popper', 'el-cascader__dropdown', popperClass]">
+        <!-- 内嵌级联面板组件 -->
         <el-cascader-panel
           ref="panel"
           v-show="!filtering"
@@ -192,6 +193,7 @@ export default {
     ElInput,
     ElTag,
     ElScrollbar,
+    // 级联面板组件
     ElCascaderPanel
   },
 

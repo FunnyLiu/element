@@ -67,13 +67,13 @@
 |  ├── cascader
 |  |  ├── index.js
 |  |  └── src
-|  |     └── cascader.vue
+|  |     └── cascader.vue - el-cascader组件，其选项多层级基于内嵌el-cascader-panel组件实现
 |  ├── cascader-panel
 |  |  ├── index.js
 |  |  └── src
 |  |     ├── cascader-menu.vue
 |  |     ├── cascader-node.vue
-|  |     ├── cascader-panel.vue
+|  |     ├── cascader-panel.vue el-cascader-panel组件，基于el-cascader-menu，和el-cascader-node来扁平化处理多层级
 |  |     ├── node.js
 |  |     └── store.js
 |  ├── checkbox
@@ -296,7 +296,7 @@
 |  |  ├── index.js
 |  |  └── src
 |  |     ├── button.vue
-|  |     ├── main.vue
+|  |     ├── main.vue - el-slider组件
 |  |     └── marker.js
 |  ├── spinner
 |  |  ├── index.js
@@ -315,7 +315,7 @@
 |  ├── switch
 |  |  ├── index.js
 |  |  └── src
-|  |     └── component.vue
+|  |     └── component.vue - el-switch组件
 |  ├── tab-pane
 |  |  └── index.js
 |  ├── table

@@ -79,6 +79,7 @@ export default {
         <div class="el-cascader-menu__empty-text">{ this.t('el.cascader.noData') }</div>
       );
     },
+    // 将多层级扁平化处理而不是递归
     renderNodeList(h) {
       const { menuId } = this;
       const { isHoverMenu } = this.panel;
