@@ -192,7 +192,7 @@
 |  ├── input-number
 |  |  ├── index.js
 |  |  └── src
-|  |     └── input-number.vue
+|  |     └── input-number.vue - el-input-number组件，使用自定义防抖指令v-repeat-click。
 |  ├── link
 |  |  ├── index.js
 |  |  └── src
@@ -351,7 +351,7 @@
 |  ├── tag
 |  |  ├── index.js
 |  |  └── src
-|  |     └── tag.vue
+|  |     └── tag.vue - el-tag组件，使用render函数
 |  ├── theme-chalk
 |  |  ├── README.md
 |  |  ├── gulpfile.js

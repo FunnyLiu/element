@@ -26,6 +26,7 @@
       @keydown.enter="increase">
       <i :class="`el-icon-${controlsAtRight ? 'arrow-up' : 'plus'}`"></i>
     </span>
+    <!-- .native绑定原生事件 -->
     <el-input
       ref="input"
       :value="displayValue"
@@ -269,6 +270,7 @@
     },
     mounted() {
       let innerInput = this.$refs.input.$refs.input;
+      // ARIA无障碍设计
       innerInput.setAttribute('role', 'spinbutton');
       innerInput.setAttribute('aria-valuemax', this.max);
       innerInput.setAttribute('aria-valuemin', this.min);

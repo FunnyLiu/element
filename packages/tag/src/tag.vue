@@ -51,7 +51,7 @@
           }
         </span>
       );
-
+      // 动态返回用render比较灵活
       return this.disableTransitions ? tagEl : <transition name="el-zoom-in-center">{ tagEl }</transition>;
     }
   };
