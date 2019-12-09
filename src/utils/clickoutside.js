@@ -44,6 +44,7 @@ function createDocumentHandler(el, binding, vnode) {
  * <div v-element-clickoutside="handleClose">
  * ```
  */
+// 外部触发事件指令
 export default {
   bind(el, binding, vnode) {
     nodeList.push(el);

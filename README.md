@@ -288,10 +288,10 @@
 |  |  ├── index.js
 |  |  └── src
 |  |     ├── navigation-mixin.js
-|  |     ├── option-group.vue
-|  |     ├── option.vue
-|  |     ├── select-dropdown.vue
-|  |     └── select.vue
+|  |     ├── option-group.vue - el-option-group组件
+|  |     ├── option.vue - el-option组件
+|  |     ├── select-dropdown.vue - el-select-dropdown组件
+|  |     └── select.vue - el-select组件
 |  ├── slider
 |  |  ├── index.js
 |  |  └── src

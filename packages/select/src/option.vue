@@ -153,6 +153,7 @@
     },
 
     beforeDestroy() {
+      // this.select是从外部传入的el-select组件实例
       const { selected, multiple } = this.select;
       let selectedOptions = multiple ? selected : [selected];
       let index = this.select.cachedOptions.indexOf(this);
