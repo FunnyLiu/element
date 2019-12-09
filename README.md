@@ -530,7 +530,7 @@
 |     ├── clickoutside.js
 |     ├── date-util.js
 |     ├── date.js
-|     ├── dom.js
+|     ├── dom.js - 一些dom操作如事件绑定on/off/once，class操作等
 |     ├── menu
 |     |  ├── aria-menubar.js
 |     |  ├── aria-menuitem.js

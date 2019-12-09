@@ -1,7 +1,7 @@
 /* istanbul ignore next */
 
 import Vue from 'vue';
-
+// 通过Vue.prototype.$isServer判断是否是服务端
 const isServer = Vue.prototype.$isServer;
 const SPECIAL_CHARS_REGEXP = /([\:\-\_]+(.))/g;
 const MOZ_HACK_REGEXP = /^moz([A-Z])/;
@@ -19,6 +19,7 @@ const camelCase = function(name) {
 };
 
 /* istanbul ignore next */
+// 兼容ie的事件系统
 export const on = (function() {
   if (!isServer && document.addEventListener) {
     return function(element, event, handler) {

@@ -48,6 +48,7 @@
 <script>
   import ElInput from 'element-ui/packages/input';
   import Focus from 'element-ui/src/mixins/focus';
+  //防抖指令
   import RepeatClick from 'element-ui/src/directives/repeat-click';
 
   export default {
