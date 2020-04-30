@@ -76,6 +76,7 @@ const Loading = (options = {}) => {
   } else {
     options.body = true;
   }
+  // 通过fullscreenLoading来保证其单例
   if (options.fullscreen && fullscreenLoading) {
     return fullscreenLoading;
   }
@@ -98,6 +99,7 @@ const Loading = (options = {}) => {
     instance.visible = true;
   });
   if (options.fullscreen) {
+    // 将实例化的loading类标识位fullscreenLoading
     fullscreenLoading = instance;
   }
   return instance;
