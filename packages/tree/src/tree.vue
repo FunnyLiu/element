@@ -321,7 +321,7 @@
 
     created() {
       this.isTree = true;
-
+      // 为该组件单独定制了一个管理数据的model，挂载到store上。
       this.store = new TreeStore({
         key: this.nodeKey,
         data: this.data,

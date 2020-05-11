@@ -57,6 +57,7 @@
         role="group"
         :aria-expanded="expanded"
       >
+        <!-- node组件递归嵌套自己node组件 -->
         <el-tree-node
           :render-content="renderContent"
           v-for="child in node.childNodes"

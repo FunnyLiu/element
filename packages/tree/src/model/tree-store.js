@@ -13,7 +13,7 @@ export default class TreeStore {
     }
 
     this.nodesMap = {};
-
+    // 每一个node节点又有自己的model，来管理自己的数据
     this.root = new Node({
       data: this.data,
       store: this

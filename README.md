@@ -493,12 +493,12 @@
 |  ├── tree
 |  |  ├── index.js
 |  |  └── src
-|  |     ├── model
+|  |     ├── model - 树状组件依赖的数据模型
 |  |     |  ├── node.js
 |  |     |  ├── tree-store.js
 |  |     |  └── util.js
-|  |     ├── tree-node.vue
-|  |     └── tree.vue
+|  |     ├── tree-node.vue - 树组件中子节点
+|  |     └── tree.vue - el-tree树状组件
 |  └── upload
 |     ├── index.js
 |     └── src
