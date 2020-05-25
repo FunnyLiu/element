@@ -76,6 +76,7 @@ const initInstance = () => {
 };
 
 const showNextMsg = () => {
+  // 通过构造函数单例来完成弹框的唯一化
   if (!instance) {
     initInstance();
   }
@@ -157,7 +158,7 @@ const MessageBox = function(options, callback) {
 MessageBox.setDefaults = defaults => {
   MessageBox.defaults = defaults;
 };
-
+// 各种不同状态
 MessageBox.alert = (message, title, options) => {
   if (typeof title === 'object') {
     options = title;
@@ -173,7 +174,7 @@ MessageBox.alert = (message, title, options) => {
     closeOnClickModal: false
   }, options));
 };
-
+// 各种不同状态
 MessageBox.confirm = (message, title, options) => {
   if (typeof title === 'object') {
     options = title;

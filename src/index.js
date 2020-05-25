@@ -165,7 +165,7 @@ const components = [
   Popconfirm,
   CollapseTransition
 ];
-
+// 对外暴露install方法，方便作为vue 插件使用
 const install = function(Vue, opts = {}) {
   locale.use(opts.locale);
   locale.i18n(opts.i18n);
@@ -181,7 +181,7 @@ const install = function(Vue, opts = {}) {
     size: opts.size || '',
     zIndex: opts.zIndex || 2000
   };
-
+  // 给vue原型设置了各种方便快捷的用法。
   Vue.prototype.$loading = Loading.service;
   Vue.prototype.$msgbox = MessageBox;
   Vue.prototype.$alert = MessageBox.alert;
